@@ -67,14 +67,13 @@ class Poisson(object):
 
     def run_animation_in_file(self):
 
-        for s in range(1000):
+        for s in range(10):
             self.convolve_phi()
             #self.convergance_check()
 
     def animate(self, i):
         self.run_animation_in_file()
         self.mat.set_data(self.phi_lattice[:, :, self.rhok])
-        print(i)
         return self.mat,
 
     def run(self):
